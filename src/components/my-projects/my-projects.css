@@ -1,0 +1,27 @@
+.projects {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 0;
+}
+
+.project__links a {
+  display: block;
+  width: fit-content;
+}
+
+.project {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.project img {
+    width: 100%;
+    max-width: 540px;
+}
+
+.project:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+

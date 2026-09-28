@@ -1,0 +1,12 @@
+.about-me .about-me__image {
+  width: 100%;
+  max-width: 520px;
+}
+
+@media (min-width: 820px) {
+  .about-me {
+    display: grid;
+    grid-template-columns: 520px auto;
+    gap: 32px;
+  }
+}

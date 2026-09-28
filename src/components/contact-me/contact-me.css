@@ -1,0 +1,17 @@
+.contact-me__content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact-me label {
+  display: block;
+  padding: 0.5rem 0;
+}
+
+.contact-me textarea {
+  height: 130px;
+  width: 500px;
+  resize: none;
+}

@@ -1,3 +1,11 @@
+---
+import "../styles/global.css";
+import "7.css";
+const { title } = Astro.props;
+import Header from "../components/header/header";
+import Footer from "../components/footer/footer";
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -6,18 +14,11 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
 	</head>
-	<body>
+	<body class="window active">
+		<Header/>
 		<slot />
+		<Footer/>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

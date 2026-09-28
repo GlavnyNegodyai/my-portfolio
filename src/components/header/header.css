@@ -1,0 +1,50 @@
+.title-bar-text {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.header-menu a{
+    color: black;
+}
+
+.header-menu a:hover{
+    text-decoration: none;
+}
+
+ul.header-menu [role="menuitem"] img {
+	position: unset;
+	transform: unset;
+}
+
+[role=menuitem]:hover ul[role=menu] {
+    display: unset;
+}
+
+ul[role=menubar]>[role=menuitem] {
+    display: flex;
+    align-items: center;
+}
+
+
+ul [role=menuitem] span {
+    margin: 12px;
+}
+
+ul [role=menuitem] img {
+    width: 12px;
+}
+
+
+.menu-dropdown{
+    max-width: 200px;
+}
+
+.dropdown-menus{
+    display: flex;
+}
+
+.title-bar{
+    border: 0;
+    border-radius: 0;
+}
