@@ -6,7 +6,7 @@ export default function Header() {
       <header className="title-bar">
         
         <div className="title-bar-text">
-          <img src="/src/assets/icons/globe.svg" alt=""/>
+          <img src="/src/assets/icons/imageres_130-8.webp" alt="" width="18px" height="18px"/>
           <span>Pavel_Dubovik</span>
           </div>
       </header>
@@ -35,7 +35,7 @@ export default function Header() {
           <div>
             <img src="/src/assets/icons/document.svg" alt=""/>
             <span>
-              <a href="../../files/MyResume.pdf">My resume</a>
+              <a href="/public/files/MyResume.pdf">My resume</a>
             </span>
           </div>
         </li>

@@ -10,3 +10,16 @@
     gap: 32px;
   }
 }
+
+.stack-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20%, 70px));
+    justify-content: space-between;
+    gap: 1rem 0;
+}
+
+.experience__stack li {
+  min-width: 80px;
+  min-height: 0;
+  flex: 1 1 0;
+}

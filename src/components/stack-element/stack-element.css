@@ -1,0 +1,13 @@
+.stack-list__element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stack-list__element p{
+    text-align: center;
+}
+
+.stack-list__element img {
+    max-width: 36px;
+}

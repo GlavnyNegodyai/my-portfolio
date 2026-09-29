@@ -2,7 +2,6 @@ import { useState } from "react";
 
 import AboutMe from "../about-me/about-me";
 import MyStack from "../my-stack/my-stack";
-import MyExp from "../my-experience/my-experience";
 import MyProjects from "../my-projects/my-projects";
 import ContactMe from "../contact-me/contact-me";
 import "./tabs.css";
@@ -13,7 +12,6 @@ export default function TabList() {
   const tabs = [
     ["tab-A", "About me"],
     ["tab-B", "My stack"],
-    ["tab-C", "My experience"],
     ["tab-D", "My projects"],
     ["tab-E", "Contact me"],
   ];
@@ -41,10 +39,6 @@ export default function TabList() {
 
         <article className="has-scrollbar" role="tabpanel" id="tab-B" hidden={activeTab !== "tab-B"}>
           <MyStack />
-        </article>
-
-        <article className="has-scrollbar" role="tabpanel" id="tab-C" hidden={activeTab !== "tab-C"}>
-          <MyExp />
         </article>
 
         <article className="has-scrollbar" role="tabpanel" id="tab-D" hidden={activeTab !== "tab-D"}>
