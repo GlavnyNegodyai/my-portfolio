@@ -1,5 +1,8 @@
 import "./header.css";
 import type { HeaderContent } from "../../i18n/content-types";
+import siteIcon from "../../assets/icons/imageres_130-8.webp";
+import langIcon from "../../assets/icons/globe.svg";
+import resumeIcon from "../../assets/icons/document.svg";
 
 export default function Header({content, currLang, resumeLang}: {content: HeaderContent, currLang: string, resumeLang: string}) {
   const handleLangChange = (langPath: string) => {
@@ -13,7 +16,7 @@ export default function Header({content, currLang, resumeLang}: {content: Header
         
         <div className="title-bar-text">
           <img
-            src="/src/assets/icons/imageres_130-8.webp"
+            src={siteIcon.src}
             alt=""
             width="18px"
             height="18px"
@@ -24,7 +27,7 @@ export default function Header({content, currLang, resumeLang}: {content: Header
       <ul className="header-menu" role="menubar">
         <li role="menuitem">
           <div>
-            <img src="/src/assets/icons/globe.svg" alt="" />
+            <img src={langIcon.src} alt="" />
             <span>{content.lang}</span>
           </div>
           <ul role="menu" className="can-hover menu-dropdown">
@@ -56,9 +59,9 @@ export default function Header({content, currLang, resumeLang}: {content: Header
         </li>
         <li role="menuitem">
           <div>
-            <img src="/src/assets/icons/document.svg" alt="" />
+            <img src={resumeIcon.src} alt="" />
             <span>
-              <a href={`/public/files/my_resume(${resumeLang}).pdf`}>{content.resume}</a>
+              <a href={`/files/my_resume(${resumeLang}).pdf`}>{content.resume}</a>
             </span>
           </div>
         </li>

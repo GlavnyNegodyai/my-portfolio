@@ -20,7 +20,7 @@ export default function AboutMe({ content, resumeLang }: {content: AboutMeConten
             <p key={i}>{paragraph}</p>
           ))}
 
-          <a rel="nofollow" href={`/public/files/my_resume(${resumeLang}).pdf`}>
+          <a href={`/files/my_resume(${resumeLang}).pdf`} target="_blank" rel="noopener noreferrer">
             {content.resumeText}
           </a>
         </div>

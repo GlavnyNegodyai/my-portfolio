@@ -1,6 +1,9 @@
 import "./contact-me.css";
 import { useState } from "react";
 import type { ContactMeContent } from "../../i18n/content-types";
+import telegramIcon from "../../assets/icons/telegram.svg";
+import whatsappIcon from "../../assets/icons/whatsapp.svg";
+import mailIcon from "../../assets/icons/mail.svg";
 
 type ContactMeProps = {
   content: ContactMeContent;
@@ -69,24 +72,24 @@ export default function ContactMe({ content }: ContactMeProps) {
 
             <ul className="contacts-list">
               <li className="contacts-list__element">
-                <a href="">
-                  <img src="/src/assets/icons/telegram.svg" alt="" />
+                <a href="https://t.me/wannabegood" target="_blank" rel="noopener noreferrer">
+                  <img src={telegramIcon.src} alt="Telegram" />
                   <div role="tooltip" className="contacts-list__popup">
                     Telegram
                   </div>
                 </a>
               </li>
               <li className="contacts-list__element">
-                <a href="">
-                  <img src="/src/assets/icons/whatsapp.svg" alt="" />
-                  <div role="tooltip" className="contacts-list__popup">
+                <a href="https://wa.me/79833044506" target="_blank" rel="noopener noreferrer">
+                  <img src={whatsappIcon.src} alt="WhatsApp" />
+                  <div role="tooltip"  className="contacts-list__popup">
                     WhatsApp
                   </div>
                 </a>
               </li>
               <li className="contacts-list__element">
-                <a href="">
-                  <img src="/src/assets/icons/mail.svg" alt="" />
+                <a href="mailto:pawel.dubowick@yandex.ru" target="_blank" rel="noopener noreferrer">
+                  <img src={mailIcon.src} alt="E-mail" />
                   <div role="tooltip" className="contacts-list__popup">
                     E-mail
                   </div>

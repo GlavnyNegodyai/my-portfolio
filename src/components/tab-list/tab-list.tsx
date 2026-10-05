@@ -7,16 +7,12 @@ import ContactMe from "../contact-me/contact-me";
 import "./tab-list.css";
 import type { TabsContent } from "../../i18n/content-types";
 
-type TabsContentProps = {
-  content: TabsContent;
-};
 
-export default function TabList({ content }: TabsContentProps) {
+export default function TabList({ content, resumeLang }: {content: TabsContent, resumeLang: string}) {
   const [activeTab, setActiveTab] = useState<string>(content.tabs[0][0]);
 
   useEffect(() => {
     const url = new URL(window.location.href);
-    console.log(url.searchParams.get("tab"));
     const initTabParam = url.searchParams.get("tab");
     if (initTabParam) {
       setActiveTab(initTabParam);
@@ -56,7 +52,7 @@ export default function TabList({ content }: TabsContentProps) {
           id="tab-A"
           hidden={activeTab !== "tab-A"}
         >
-          <AboutMe content={content.aboutMe} />
+          <AboutMe content={content.aboutMe} resumeLang={resumeLang}/>
         </article>
 
         <article
