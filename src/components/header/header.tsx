@@ -61,7 +61,7 @@ export default function Header({content, currLang, resumeLang}: {content: Header
           <div>
             <img src={resumeIcon.src} alt="" />
             <span>
-              <a href={`/files/my_resume(${resumeLang}).pdf`}>{content.resume}</a>
+              <a href={`../files/my_resume(${resumeLang}).pdf`}>{content.resume}</a>
             </span>
           </div>
         </li>
