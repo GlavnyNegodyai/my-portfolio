@@ -10,7 +10,7 @@ export default function StackElement({ src, name }: elementProps) {
     <li>
       <div className="stack-list__element">
         <img
-          src={`/stack-icons/${src != "" ? src : "default-file"}`}
+          src={`${import.meta.env.BASE_URL}/stack-icons/${src != "" ? src : "default-file"}`}
           alt={`${src} icon`}
         />
         <p>{name}</p>

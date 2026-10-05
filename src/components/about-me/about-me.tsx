@@ -20,7 +20,7 @@ export default function AboutMe({ content, resumeLang }: {content: AboutMeConten
             <p key={i}>{paragraph}</p>
           ))}
 
-          <a href={`/files/my_resume(${resumeLang}).pdf`} target="_blank" rel="noopener noreferrer">
+          <a href={`${import.meta.env.BASE_URL}/files/my_resume(${resumeLang}).pdf`} target="_blank" rel="noopener noreferrer">
             {content.resumeText}
           </a>
         </div>

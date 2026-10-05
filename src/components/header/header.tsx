@@ -7,7 +7,7 @@ import resumeIcon from "../../assets/icons/document.svg";
 export default function Header({content, currLang, resumeLang}: {content: HeaderContent, currLang: string, resumeLang: string}) {
   const handleLangChange = (langPath: string) => {
     const params = new URLSearchParams(window.location.search);
-    window.location.href = `${langPath}?${params}`;
+    window.location.href = `${import.meta.env.BASE_URL}${langPath}?${params}`;
   };
 
   return (
@@ -61,7 +61,7 @@ export default function Header({content, currLang, resumeLang}: {content: Header
           <div>
             <img src={resumeIcon.src} alt="" />
             <span>
-              <a href={`/files/my_resume(${resumeLang}).pdf`}>{content.resume}</a>
+              <a href={`${import.meta.env.BASE_URL}/files/my_resume(${resumeLang}).pdf`}>{content.resume}</a>
             </span>
           </div>
         </li>
