@@ -6,6 +6,8 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://glavnynegodyai.github.io',
+  base: '/my-portfolio',
   vite: {
     plugins: [imagetools()],
   },
