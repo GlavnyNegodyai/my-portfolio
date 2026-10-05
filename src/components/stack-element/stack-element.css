@@ -9,5 +9,7 @@
 }
 
 .stack-list__element img {
-    max-width: 36px;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
 }

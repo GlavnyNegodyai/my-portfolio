@@ -1,69 +1,49 @@
 import "./my-projects.css";
+import type { projPropsTypes } from "../../i18n/content-types";
+import type { MyProjectsContent } from "../../i18n/content-types";
+import stellarImage from "../../assets/images/stellar.webp?w=800;1200&format=webp&as=srcset";
+import mLabsImage from "../../assets/images/mlabs.webp?w=800;1200&format=webp&as=srcset";
 
-type projProps = {
-  name: string;
-  desc: string;
-  live_link: string;
-  github_link: string;
-  proj_img: string;
+
+type MyProjectsProps = {
+  content: MyProjectsContent;
 };
 
-const projects = [
-  {
-    name: "Project Alpha",
-    desc: "A simple web application for managing daily tasks.",
-    live_link: "https://example.com",
-    github_link: "https://github.com/example/project-alpha",
-    proj_img: "https://placehold.co/600x400",
-  },
-  {
-    name: "Project Beta",
-    desc: "A modern dashboard with analytics and user statistics.",
-    live_link: "https://example.com",
-    github_link: "https://github.com/example/project-beta",
-    proj_img: "https://placehold.co/600x400",
-  },
-  {
-    name: "Project Theta",
-    desc: "A modern dashboard with analytics and user statistics.",
-    live_link: "https://example.com",
-    github_link: "https://github.com/example/project-beta",
-    proj_img: "https://placehold.co/600x400",
-  },
-];
+const projectImages = [stellarImage, mLabsImage];
 
-function Project({ name, desc, live_link, github_link, proj_img }: projProps) {
+function Project({
+  projProps,
+  src,
+}: {
+  projProps: projPropsTypes;
+  src: string;
+}) {
   return (
     <div className="project">
       <div className="project__text">
-        <h2>{name}</h2>
-        <p>{desc}</p>
+        <h2>{projProps.name}</h2>
+        <p>{projProps.desc}</p>
         <div className="project__links">
-          <a href={live_link}>Live version</a>
-          <a href={github_link}>Github Page</a>
+          <a href={projProps.live_link}>{projProps.liveLinkText}</a>
+          <a href={projProps.github_link}>{projProps.githubLinkText}</a>
         </div>
       </div>
-      <img src={proj_img} alt="" className="project__image" />
+      <img
+        src={src}
+        srcSet={src}
+        className="project__image"
+      />
     </div>
   );
 }
 
-export default function MyProjects() {
+export default function MyProjects({ content }: MyProjectsProps) {
   return (
     <section className="projects">
-      <h1>My projects</h1>
+      <h1>{content.title}</h1>
       <div className="projects-wrapper">
-        {projects.map((projObj: projProps, i) => {
-          return (
-            <Project
-              key={i}
-              name={projObj.name}
-              desc={projObj.desc}
-              live_link={projObj.live_link}
-              github_link={projObj.github_link}
-              proj_img={projObj.proj_img}
-            />
-          );
+        {content.projects.map((projObj: projPropsTypes, i) => {
+          return <Project key={i} projProps={projObj} src={projectImages[i]} />;
         })}
       </div>
     </section>

@@ -1,10 +1,14 @@
 // @ts-check
 import { defineConfig } from "astro/config";
+import { imagetools } from "vite-imagetools";
 
 import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
+  vite: {
+    plugins: [imagetools()],
+  },
   integrations: [react()],
   i18n: {
     locales: ["ru", "en"],
@@ -13,7 +17,6 @@ export default defineConfig({
       prefixDefaultLocale: true,
       redirectToDefaultLocale: true,
       fallbackType: "redirect",
-  }
+    },
   },
-
 });

@@ -1,44 +1,34 @@
 import "./my-stack.css";
 import StackElement from "../stack-element/stack-element";
+import type { MyStackContent } from "../../i18n/content-types";
 
-const UIstackObjs = [
-  { name: "HTML", src: "" },
-  { name: "CSS", src: "" },
-  { name: "Tailwind", src: "" },
-  { name: "GSAP", src: "" },
-  { name: "Lenis", src: "" },
-  { name: "Motion", src: "" },
-];
+type MyStackProps = {
+  content: MyStackContent;
+};
 
-const frmStackObjs = [
-  { name: "React", src: "react" },
-  { name: "TypeScript", src: "" },
-  { name: "Next", src: "" },
-  { name: "Astro", src: "" },
-  { name: "Redux Toolkit", src: "" },
-];
-
-export default function MyStack() {
+export default function MyStack({ content }: MyStackProps) {
   return (
     <section>
-      <h1>My stack</h1>
+      <h1>{content.title}</h1>
       <div className="stack__items">
-        <div className="stack__item">
-          <h2>UI, Design & motion</h2>
-          <ul className="stack-list">
-            {UIstackObjs.map((obj, i) => {
-              return <StackElement name={obj.name} src={obj.src} key={i} />;
-            })}
-          </ul>
-        </div>
-        <div>
-          <h2>Languages & Frameworks</h2>
-          <ul className="stack-list">
-            {frmStackObjs.map((obj, i) => {
-              return <StackElement name={obj.name} src={obj.src} key={i} />;
-            })}
-          </ul>
-        </div>
+        {content.categories.map((category, i) => {
+          return (
+            <div className={i === 0 ? "stack__item" : ""} key={i}>
+              <h2>{category.title}</h2>
+              <ul className="stack-list">
+                {category.stack.map((obj, i) => {
+                  return (
+                    <StackElement
+                      name={obj.name}
+                      src={obj.src}
+                      key={i}
+                    />
+                  );
+                })}
+              </ul>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

@@ -1,31 +1,48 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import AboutMe from "../about-me/about-me";
 import MyStack from "../my-stack/my-stack";
 import MyProjects from "../my-projects/my-projects";
 import ContactMe from "../contact-me/contact-me";
-import "./tabs.css";
+import "./tab-list.css";
+import type { TabsContent } from "../../i18n/content-types";
 
-export default function TabList() {
-  const [activeTab, setActiveTab] = useState("tab-A");
+type TabsContentProps = {
+  content: TabsContent;
+};
 
-  const tabs = [
-    ["tab-A", "About me"],
-    ["tab-B", "My stack"],
-    ["tab-D", "My projects"],
-    ["tab-E", "Contact me"],
-  ];
+export default function TabList({ content }: TabsContentProps) {
+  const [activeTab, setActiveTab] = useState<string>(content.tabs[0][0]);
+
+  useEffect(() => {
+    const url = new URL(window.location.href);
+    console.log(url.searchParams.get("tab"));
+    const initTabParam = url.searchParams.get("tab");
+    if (initTabParam) {
+      setActiveTab(initTabParam);
+    } else {
+      url.searchParams.set("tab", content.tabs[0][0]);
+      window.history.replaceState({}, "", url);
+    }
+  }, []);
+
+  const handleTabChange = (id: string) => {
+    setActiveTab(id);
+    const url = new URL(window.location.href);
+    url.searchParams.set("tab", id);
+    window.history.replaceState({}, "", url);
+  };
 
   return (
     <section className="tabs">
       <menu role="tablist">
-        {tabs.map(([id, label]) => (
+        {content.tabs.map(([id, label]) => (
           <button
             key={id}
             role="tab"
             aria-controls={id}
             aria-selected={activeTab === id}
-            onClick={() => setActiveTab(id)}
+            onClick={() => handleTabChange(id)}
           >
             {label}
           </button>
@@ -33,20 +50,40 @@ export default function TabList() {
       </menu>
 
       <div className="tabs__wrapper">
-        <article className="has-scrollbar" role="tabpanel" id="tab-A" hidden={activeTab !== "tab-A"}>
-          <AboutMe />
+        <article
+          className="has-scrollbar"
+          role="tabpanel"
+          id="tab-A"
+          hidden={activeTab !== "tab-A"}
+        >
+          <AboutMe content={content.aboutMe} />
         </article>
 
-        <article className="has-scrollbar" role="tabpanel" id="tab-B" hidden={activeTab !== "tab-B"}>
-          <MyStack />
+        <article
+          className="has-scrollbar"
+          role="tabpanel"
+          id="tab-B"
+          hidden={activeTab !== "tab-B"}
+        >
+          <MyStack content={content.myStack} />
         </article>
 
-        <article className="has-scrollbar" role="tabpanel" id="tab-D" hidden={activeTab !== "tab-D"}>
-          <MyProjects />
+        <article
+          className="has-scrollbar"
+          role="tabpanel"
+          id="tab-D"
+          hidden={activeTab !== "tab-C"}
+        >
+          <MyProjects content={content.myProjects} />
         </article>
 
-        <article className="has-scrollbar" role="tabpanel" id="tab-E" hidden={activeTab !== "tab-E"}>
-          <ContactMe />
+        <article
+          className="has-scrollbar"
+          role="tabpanel"
+          id="tab-E"
+          hidden={activeTab !== "tab-D"}
+        >
+          <ContactMe content={content.contactMe} />
         </article>
       </div>
     </section>

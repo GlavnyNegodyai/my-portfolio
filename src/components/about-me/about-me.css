@@ -1,13 +1,29 @@
+  .about-me {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
 .about-me .about-me__image {
+  display: none;
   width: 100%;
-  max-width: 520px;
+  max-height: 120px;
+  max-width: 120px;
+  border-radius: 100%;
+  object-fit: cover;
 }
 
-@media (min-width: 820px) {
-  .about-me {
-    display: grid;
-    grid-template-columns: 520px auto;
-    gap: 32px;
+.about-me .about-me__image.about-me__image--mobile{
+  display: unset;
+}
+
+@media (min-width: 640px) {
+  .about-me .about-me__image {
+    display: unset;
+  }
+
+  .about-me .about-me__image.about-me__image--mobile{
+    display: none;
   }
 }
 

@@ -1,0 +1,152 @@
+{
+  "lang": "en",
+  "aboutMe": {
+    "greeting": "Hello!",
+    "paragraphs": [
+      "Hi! I'm Pavel — a Frontend Developer with commercial experience creating interactive interfaces, landing pages, and complex animations.",
+      "I'm open to interesting challenges and projects — I'd be glad to become part of your team!"
+    ],
+    "resumeText": "My Resume",
+    "experience": {
+      "title": "My Experience",
+      "company": "RichMind",
+      "position": "UI Developer",
+      "period": "October 2024 — September 2026",
+      "stackTitle": "Tech Stack",
+      "stack": [
+        {
+          "name": "TypeScript",
+          "src": "typescript.webp"
+        },
+        {
+          "name": "React",
+          "src": "react.svg"
+        },
+        {
+          "name": "Astro",
+          "src": "astro.svg"
+        },
+        {
+          "name": "GSAP",
+          "src": "gsap.svg"
+        },
+        {
+          "name": "Lenis",
+          "src": "lenis.svg"
+        },
+        {
+          "name": "Tailwind",
+          "src": "tailwind.webp"
+        }
+      ],
+      "description": "Developed interactive promo pages and web applications with a focus on performance and expressive animations. Initiated architecture optimization, implemented a component-based approach, and built standardized modular solutions that reduced time-to-market for new products."
+    }
+  },
+  "myProjects": {
+    "title": "My Projects",
+    "projects": [
+      {
+        "name": "Stellar Burgers",
+        "desc": "A training project completed as part of the Yandex Practicum course, featuring a web application for building space-themed burgers and placing online orders. The functionality includes a drag-and-drop constructor, authentication, a personal account, and real-time order status tracking via WebSocket.",
+        "liveLinkText": "Open Website",
+        "githubLinkText": "GitHub Page",
+        "live_link": "https://glavnynegodyai.github.io/react-burger/",
+        "github_link": "https://github.com/GlavnyNegodyai/react-burger"
+      },
+      {
+        "name": "M.Labs",
+        "desc": "A personal single-page promotional website for a fictional agency, created to practice working with GSAP and inspired by the visual identity of Nothing and Awwwards. The interface features a Hero section slider with scroll-linked animations, an interactive SVG mask, cursor-responsive elements, and smooth scrolling powered by Lenis.",
+        "liveLinkText": "Open Website",
+        "githubLinkText": "GitHub Page",
+        "live_link": "https://glavnynegodyai.github.io/promo-landing/",
+        "github_link": "https://github.com/GlavnyNegodyai/promo-landing"
+      }
+    ]
+  },
+  "myStack": {
+    "title": "My Stack",
+    "categories": [
+      {
+        "title": "UI, Design & Animation",
+        "stack": [
+          {
+            "name": "HTML",
+            "src": "html.webp"
+          },
+          {
+            "name": "CSS",
+            "src": "css.webp"
+          },
+          {
+            "name": "Tailwind",
+            "src": "tailwind.webp"
+          },
+          {
+            "name": "GSAP",
+            "src": "gsap.svg"
+          },
+          {
+            "name": "Lenis",
+            "src": "lenis.svg"
+          },
+          {
+            "name": "Motion",
+            "src": "motion.svg"
+          }
+        ]
+      },
+      {
+        "title": "Languages & Frameworks",
+        "stack": [
+          {
+            "name": "React",
+            "src": "react.svg"
+          },
+          {
+            "name": "TypeScript",
+            "src": "typescript.webp"
+          },
+          {
+            "name": "Next",
+            "src": "next.webp"
+          },
+          {
+            "name": "Astro",
+            "src": "astro.svg"
+          },
+          {
+            "name": "Redux Toolkit",
+            "src": "redux.svg"
+          }
+        ]
+      }
+    ]
+  },
+  "contactMe": {
+    "title": "Contact Me",
+    "description": "I'm open to job opportunities, freelance work, and project-based collaboration. You can leave me a message using this form...",
+    "form": {
+      "emailLabel": "Your E-mail",
+      "subjectLabel": "Subject",
+      "messageLabel": "Message",
+      "buttonText": "Send",
+      "successMessage": "Message sent successfully",
+      "errorMessage": "Something went wrong, please try again later"
+    },
+    "contacts": {
+      "title": "Or...",
+      "description": "You can contact me in any other way that is convenient for you"
+    }
+  },
+  "tabs": [
+    ["tab-A", "About Me"],
+    ["tab-B", "My Stack"],
+    ["tab-C", "My Projects"],
+    ["tab-D", "Contact Me"]
+  ],
+  "header": {
+    "lang": "Language",
+    "resume": "My Resume"
+  },
+  "title": "Pavel_Dubovik | Frontend Developer"
+}

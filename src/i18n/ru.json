@@ -1,0 +1,152 @@
+{
+  "lang": "ru",
+  "aboutMe": {
+    "greeting": "Привет!",
+    "paragraphs": [
+      "Привет! Я Павел — Frontend Developer с коммерческим опытом создания интерактивных интерфейсов, лендингов и сложной анимации.",
+      "Открыт к интересным задачам и проектам — буду рад стать частью вашей команды!"
+    ],
+    "resumeText": "Моё резюме",
+    "experience": {
+      "title": "Мой опыт",
+      "company": "RichMind",
+      "position": "UI Developer",
+      "period": "Октябрь 2024 — Сентябрь 2026",
+      "stackTitle": "Используемый стек",
+      "stack": [
+        {
+          "name": "TypeScript",
+          "src": "typescript.webp"
+        },
+        {
+          "name": "React",
+          "src": "react.svg"
+        },
+        {
+          "name": "Astro",
+          "src": "astro.svg"
+        },
+        {
+          "name": "GSAP",
+          "src": "gsap.svg"
+        },
+        {
+          "name": "Lenis",
+          "src": "lenis.svg"
+        },
+        {
+          "name": "Tailwind",
+          "src": "tailwind.webp"
+        }
+      ],
+      "description": "Занимался разработкой интерактивных промо-страниц и веб-приложений с упором на производительность и выразительные анимации. Инициировал оптимизацию архитектуры, внедрил компонентный подход и создал стандартизированные модульные решения, сократившие сроки разработки новых продуктов."
+    }
+  },
+  "myProjects": {
+    "title": "Мои проекты",
+    "projects": [
+      {
+        "name": "Stellar Burgers",
+        "desc": "Учебный проект, выполненный в рамках курса Яндекс Практикума, представляющий собой веб-приложение для сборки космических бургеров и онлайн-оформления заказов. Функциональность включает конструктор с поддержкой drag-and-drop, авторизацию, личный кабинет и отслеживание статуса заказов в реальном времени через WebSocket.",
+        "liveLinkText": "Открыть сайт",
+        "githubLinkText": "Страница GitHub",
+        "live_link": "https://glavnynegodyai.github.io/react-burger/",
+        "github_link": "https://github.com/GlavnyNegodyai/react-burger"
+      },
+      {
+        "name": "M.Labs",
+        "desc": "Пет-проект одностраничного промо-сайта вымышленного агентства, созданный для практики работы с GSAP в стиле айдентики Nothing и Awwwards. Интерфейс включает слайдер в секции Hero с анимацией привязки к скроллу, интерактивную SVG-маску, элементы, реагирующие на курсор, и плавную прокрутку на базе Lenis.",
+        "liveLinkText": "Открыть сайт",
+        "githubLinkText": "Страница GitHub",
+        "live_link": "https://glavnynegodyai.github.io/promo-landing/",
+        "github_link": "https://github.com/GlavnyNegodyai/promo-landing"
+      }
+    ]
+  },
+  "myStack": {
+    "title": "Мой стек",
+    "categories": [
+      {
+        "title": "UI, дизайн и анимации",
+        "stack": [
+          {
+            "name": "HTML",
+            "src": "html.webp"
+          },
+          {
+            "name": "CSS",
+            "src": "css.webp"
+          },
+          {
+            "name": "Tailwind",
+            "src": "tailwind.webp"
+          },
+          {
+            "name": "GSAP",
+            "src": "gsap.svg"
+          },
+          {
+            "name": "Lenis",
+            "src": "lenis.svg"
+          },
+          {
+            "name": "Motion",
+            "src": "motion.svg"
+          }
+        ]
+      },
+      {
+        "title": "Языки и фреймворки",
+        "stack": [
+          {
+            "name": "React",
+            "src": "react.svg"
+          },
+          {
+            "name": "TypeScript",
+            "src": "typescript.webp"
+          },
+          {
+            "name": "Next",
+            "src": "next.webp"
+          },
+          {
+            "name": "Astro",
+            "src": "astro.svg"
+          },
+          {
+            "name": "Redux Toolkit",
+            "src": "redux.svg"
+          }
+        ]
+      }
+    ]
+  },
+  "contactMe": {
+    "title": "Связаться со мной",
+    "description": "Открыт к предложениям о работе, фрилансу и проектному сотрудничеству. Вы можете оставить мне сообщение через эту форму...",
+    "form": {
+      "emailLabel": "Ваш E-mail",
+      "subjectLabel": "Тема",
+      "messageLabel": "Сообщение",
+      "buttonText": "Отправить",
+      "successMessage": "Сообщение успешно отправлено",
+      "errorMessage": "Что-то пошло не так, попробуйте позже"
+    },
+    "contacts": {
+      "title": "Либо...",
+      "description": "Вы можете связаться со мной другим удобным Вам способом"
+    }
+  },
+  "tabs": [
+    ["tab-A", "Обо мне"],
+    ["tab-B", "Мой стек"],
+    ["tab-C", "Мои проекты"],
+    ["tab-D", "Мои контакты"]
+  ],
+  "header": {
+    "lang": "Язык",
+    "resume": "Моё резюме"
+  },
+  "title": "Pavel_Dubovik | Frontend-Разработчик"
+}

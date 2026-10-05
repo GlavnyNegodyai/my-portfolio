@@ -2,23 +2,9 @@
 import "../styles/global.css";
 import "7.css";
 const { title } = Astro.props;
-import Header from "../components/header/header";
-import Footer from "../components/footer/footer";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body class="window active">
-		<Header/>
-		<slot />
-		<Footer/>
-	</body>
+	<slot/>
 </html>
